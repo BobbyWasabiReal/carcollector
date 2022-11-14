@@ -1,0 +1,60 @@
+body {
+    background-color: #444444;
+    height: 100vh;
+    color: white;
+}
+
+nav {
+    background-color: #EAE151;
+    max-width: 82vmin;
+    padding: 2vmin;
+    padding-right: 100vmin;
+    margin-top: -2vmin;
+    margin-left: -2vmin;
+    margin-right: -2vmin;
+}
+
+ul, li {
+    list-style-type: none;
+    display: inline-block;
+    font-size: 2.5vmin;
+}
+
+.right {
+    text-align: right;
+    margin-right: -200vmin;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+   text-decoration: underline;
+}
+
+#garage, #about {
+    padding: 2vmin;
+}
+
+p {
+    font-size: 3vmin;
+    padding: 5vmin;
+}
+
+.car-content {
+    padding: 2vmin;
+    padding-left: 10vmin;
+}
+
+.car-contents {
+    background-color: #878787;
+    padding: 1vmin;
+    margin-right: 50vmin;
+    margin-left: 4vmin;
+}
+
+.car {
+    padding-bottom: 5vmin;
+}
