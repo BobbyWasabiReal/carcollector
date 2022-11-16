@@ -4,9 +4,13 @@
 <h1 class='title'>Car Details</h1>
 
 <div class="car-contents">
-        <p class="car-content">Make: {{ car.make }}</p>
-        <p class="car-content">Model: {{ car.model }}</p>
-        <p class="car-content">Year: {{ car.year }}</p>
-        <p class="car-content">Description: <br><br> {{ car.description }}</p>
+  <p class="car-content">Make: {{ car.make }}</p>
+  <p class="car-content">Model: {{ car.model }}</p>
+  <p class="car-content">Year: {{ car.year }}</p>
+  <p class="car-content">Description: <br><br> {{ car.description }}</p>
+  <div class="car-action">
+    <a href="{% url 'cars_update' car.id %}">Edit</a>
+    <a href="{% url 'cars_delete' car.id %}">Delete</a>
+  </div>
 </div>
 {% endblock %}

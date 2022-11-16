@@ -8,18 +8,19 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Car Collector</title>
   <!-- <link rel="stylesheet" href=""> -->
-  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
   <header class="navbar-fixed">
     <nav>
       <div class="nav">
         <ul>
-          <li><a href="/" class="left brand-logo">Car Collector</a></li>
+          <li><a href="/" class="brand-logo"><img id="logo-img" src="../../../static/images/Car_Collector__1_-removebg-preview.png" width="80vmin">Car Collector</a></li>
         </ul>
         <ul class="right">
-          <li><a href="/about" id="about">About</a></li>
-          <li><a href="/cars" id="garage">Garage</a></li>
+          <li><a href="{% url 'about' %}" id="about">About</a></li>
+          <li><a href="{% url 'cars_create' %}" id="add-car">Add a Car</a></li>
+          <li><a href="{% url 'index' %}" id="garage">Gallery</a></li>
         </ul>
       </div>
     </nav>

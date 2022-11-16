@@ -8,8 +8,8 @@ nav {
     background-color: #EAE151;
     max-width: 82vmin;
     padding: 2vmin;
-    padding-right: 100vmin;
-    margin-top: -2vmin;
+    padding-right: 120vmin;
+    margin-top: -5vmin;
     margin-left: -2vmin;
     margin-right: -2vmin;
 }
@@ -61,4 +61,19 @@ p {
 
 a#car-content-a {
     color: white;
+}
+
+#logo-img {
+    margin-bottom: -10vmin;
+    display: inline-block;
+    margin-bottom: -4vmin;
+}
+
+.brand-logo:hover {
+    text-decoration: none;
+}
+
+.right {
+    text-align: right;
+    margin-right: -20vmin;
 }
