@@ -49,7 +49,7 @@ p {
 }
 
 .car-contents {
-    background-color: #878787;
+    background-color: #7a7a7a;
     padding: 1vmin;
     margin-right: 50vmin;
     margin-left: 4vmin;
@@ -57,4 +57,8 @@ p {
 
 .car {
     padding-bottom: 5vmin;
+}
+
+a#car-content-a {
+    color: white;
 }

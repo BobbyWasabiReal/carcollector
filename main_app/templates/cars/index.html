@@ -1,18 +1,17 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h1>Cars List</h1>
+<h1 class='title'>List of Cars</h1>
 
 {% for car in cars %}
 <div class="car">
     <div class="car-contents">
-        <p class="car-content">Make: {{ car.make }}</p>
-        <p class="car-content">Model: {{ car.model }}</p>
-        <p class="car-content">Year: {{ car.year }}</p>
-        <p class="car-content">Description: {{ car.description }}</p>
+        <a href="{% url 'detail' car.id %}" id="car-content-a">
+            <p class="car-content">Make: {{ car.make }}</p>
+            <p class="car-content">Model: {{ car.model }}</p>
+            <p class="car-content">Year: {{ car.year }}</p>
+        </a>
     </div>
-</div>
-
+ </div>
 {% endfor %}
-
 {% endblock %}
