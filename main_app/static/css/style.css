@@ -77,3 +77,18 @@ a#car-content-a {
     text-align: right;
     margin-right: -20vmin;
 }
+
+.btn {
+    border: 0.5vmin solid #444444;
+    background-color: #EAE151;
+    width: 20vmin;
+    height: 5vmin;
+    transition: 200ms;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    border: 0.5vmin solid #EAE151;
+    background-color: #444444;
+    color: #EAE151;
+}

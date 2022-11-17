@@ -12,5 +12,26 @@
     <a href="{% url 'cars_update' car.id %}">Edit</a>
     <a href="{% url 'cars_delete' car.id %}">Delete</a>
   </div>
+  <div class="col s6">
+    <form action="{% url 'add_mod' car.id %}" method="POST">
+      {% csrf_token %}
+      {{ mod_form.as_p }}
+      <input type="submit" class="btn" value="Add Mod">
+    </form>
+    <table class="striped">
+      <h1>Mods:</h1>
+      <thead>
+        <tr><th>Part</th><th>Use</th></tr>
+      </thead>
+      <tbody>
+        {% for mod in car.mod_set.all %}
+          <tr>
+            <td>{{mod.part}}</td>
+            <td>{{mod.get_use_display}}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
 </div>
 {% endblock %}
