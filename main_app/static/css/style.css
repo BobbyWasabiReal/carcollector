@@ -7,36 +7,6 @@ nav, footer.page-footer {
     background-color: #d7cd4c;
 }
 
-/* 
-ul, li {
-    list-style-type: none;
-    display: inline-block;
-    font-size: 2.5vmin;
-}
-
-.right {
-    text-align: right;
-    margin-right: -200vmin;
-}
-
-a {
-    color: black;
-    text-decoration: none;
-}
-
-a:hover {
-   text-decoration: underline;
-}
-
-#garage, #about {
-    padding: 2vmin;
-}
-
-p {
-    font-size: 3vmin;
-    padding: 5vmin;
-}
-*/
 .car-content {
     padding: 2vmin;
     padding-left: 10vmin;
@@ -54,44 +24,20 @@ p {
     padding-bottom: 1vmin;
     padding-top: 2vmin;
 }
-/*
-a#car-content-a {
-    color: white;
-}
- */
+
 #logo-img {
     display: inline-block;
+    margin-bottom: -4.5vmin;
+    margin-top: -1.2vmin;
+    margin-left: 2vmin;
+    padding-right: 1vmin;
 } 
-/* 
-.brand-logo:hover {
-    text-decoration: none;
-}
-
-.right {
-    text-align: right;
-    margin-right: -20vmin;
-}
-
-.btn {
-    border: 0.5vmin solid #444444;
-    background-color: #EAE151;
-    width: 20vmin;
-    height: 5vmin;
-    transition: 200ms;
-}
-
-.btn:hover {
-    transform: scale(1.1);
-    border: 0.5vmin solid #EAE151;
-    background-color: #444444;
-    color: #EAE151;
-} */ 
 
 a {
     color: white;
 }
 
-a:hover {
+a#car-content-a:hover {
     text-decoration: underline;
 }
 
