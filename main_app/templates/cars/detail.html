@@ -4,10 +4,10 @@
 <h1 class='title'>Car Details</h1>
 
 <div class="car-contents">
-  <p class="car-content">Make: {{ car.make }}</p>
-  <p class="car-content">Model: {{ car.model }}</p>
-  <p class="car-content">Year: {{ car.year }}</p>
-  <p class="car-content">Description: <br><br> {{ car.description }}</p>
+  <h4 class="car-content">Make: {{ car.make }}</h4>
+  <h4 class="car-content">Model: {{ car.model }}</h4>
+  <h4 class="car-content">Year: {{ car.year }}</h4>
+  <h4 class="car-content">Description: <br><br> {{ car.description }}</h4>
   <div class="car-action">
     <a href="{% url 'cars_update' car.id %}">Edit</a>
     <a href="{% url 'cars_delete' car.id %}">Delete</a>
@@ -33,5 +33,57 @@
       </tbody>
     </table>
   </div>
+  <hr>
+<div class="row">
+  <div class="col s6">
+    <h3>Tracks Visited</h3>
+    {% if car.tracks.count %}
+      {% for track in car.tracks.all %}
+        <div class="card">
+          <div class="card-content">
+            <span id="black" class="card-title">
+              The {{ track.track }} located at {{ track.location }}
+            </span>
+          </div>
+          <div class="card-action">
+            <form action="{% url 'unassoc_track' car.id track.id %}" method="POST">
+              {% csrf_token %}
+              <button type="submit" class="btn">Remove</button>
+            </form>
+          </div>
+        </div>
+      {% endfor %}
+    {% else %}
+      <h5>This car has never went to a track.</h5>
+    {% endif %}
+  </div>
+  <div class="col s6">
+    <h3>Available Tracks</h3>
+    {% if tracks.count %}
+      {% for track in tracks.all %}
+        <div class="card">
+          <div class="card-content">
+            <span id="black" class="card-title">
+              The {{ track.track }} located at {{ track.location }}
+            </span>
+          </div>
+          <div class="card-action">
+            <form action="{% url 'assoc_track' car.id track.id %}" method="POST">
+              {% csrf_token %}
+              <button type="submit" class="btn">Add</button>
+            </form>
+          </div>
+        </div>
+      {% endfor %}
+    {% else %}
+      <h5>No More Available Tracks.</h5>
+    {% endif %}
+      </div>
 </div>
+
+<script>
+  const selectEl = document.getElementById('id_use');
+  M.FormSelect.init(selectEl);
+</script>
+
 {% endblock %}

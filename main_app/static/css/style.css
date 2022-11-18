@@ -1,19 +1,13 @@
 body {
     background-color: #444444;
-    height: 100vh;
     color: white;
 }
 
-nav {
-    background-color: #EAE151;
-    max-width: 82vmin;
-    padding: 2vmin;
-    padding-right: 120vmin;
-    margin-top: -5vmin;
-    margin-left: -2vmin;
-    margin-right: -2vmin;
+nav, footer.page-footer {
+    background-color: #d7cd4c;
 }
 
+/* 
 ul, li {
     list-style-type: none;
     display: inline-block;
@@ -42,7 +36,7 @@ p {
     font-size: 3vmin;
     padding: 5vmin;
 }
-
+*/
 .car-content {
     padding: 2vmin;
     padding-left: 10vmin;
@@ -53,22 +47,22 @@ p {
     padding: 1vmin;
     margin-right: 50vmin;
     margin-left: 4vmin;
+    margin-bottom: 3vmin;
 }
 
 .car {
-    padding-bottom: 5vmin;
+    padding-bottom: 1vmin;
+    padding-top: 2vmin;
 }
-
+/*
 a#car-content-a {
     color: white;
 }
-
+ */
 #logo-img {
-    margin-bottom: -10vmin;
     display: inline-block;
-    margin-bottom: -4vmin;
-}
-
+} 
+/* 
 .brand-logo:hover {
     text-decoration: none;
 }
@@ -91,4 +85,28 @@ a#car-content-a {
     border: 0.5vmin solid #EAE151;
     background-color: #444444;
     color: #EAE151;
+} */ 
+
+a {
+    color: white;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+form, input.btn {
+    margin-bottom: 2vmin;
+}
+
+input.btn {
+    margin-top: 2vmin;
+}
+
+input {
+    color: white;
+}
+
+#black {
+    color: black;
 }

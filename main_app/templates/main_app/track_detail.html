@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Track Details</h1>
+
+<div class="row">
+  <div class="col s6 col-offset-3">
+    <div class="card">
+      <div class="card-content">
+        <span id="black" class="card-title">{{ track.track }}</span>
+        <p id="black">Location: {{ track.location }}</p>
+      </div>
+      <div class="card-action">
+        <a href="{% url 'tracks_update' track.id %}">Edit</a>
+        <a href="{% url 'tracks_delete' track.id %}">Delete</a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
